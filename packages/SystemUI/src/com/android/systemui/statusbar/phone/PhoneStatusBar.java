@@ -500,7 +500,10 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.QS_TILE_TITLE_VISIBILITY),
                     false, this, UserHandle.USER_ALL);
-            update();
+           resolver.registerContentObserver(Settings.System.getUriFor(
+                  Settings.System.NAV_BAR_DYNAMIC),
+                  false, this, UserHandle.USER_ALL);
+                update();
         }
 
         @Override
@@ -514,7 +517,10 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                     || uri.equals(Settings.System.getUriFor(
                     Settings.System.QS_ROWS_LANDSCAPE))) {
                     updateResources();
-            }
+            } else if (uri.equals(Settings.System.getUriFor(
+                    Settings.System.NAV_BAR_DYNAMIC))) {
+                    mNavigationController.updateNavbarOverlay(mContext.getResources());
+           }
             update();
         }
 
