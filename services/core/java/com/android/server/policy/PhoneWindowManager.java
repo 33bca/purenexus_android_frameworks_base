@@ -2166,7 +2166,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
         mNavigationBarCanMove = width != height && shortSizeDp < 600;
 
         // reflects original device state from config or build prop, regardless of user settings
-        mHasNavigationBar = DUActionUtils.hasNavbarByDefault(mContext);
+        mHasNavigationBar = true;
 
         // For demo purposes, allow the rotation of the HDMI display to be controlled.
         // By default, HDMI locks rotation to landscape.
