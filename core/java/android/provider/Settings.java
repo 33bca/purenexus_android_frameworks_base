@@ -3872,12 +3872,6 @@ public final class Settings {
         public static final String NAVIGATION_BAR_SHOW = "navigation_bar_show";
 
         /**
-         * Dyanamic Navbar Switch
-         * @hide
-         */
-        public static final String NAV_BAR_DYNAMIC = "nav_bar_dynamic";
-
-        /**
          * Network traffic indicator, goes from least to greatest significant bitwise
          * 0 = Display up-stream traffic if set
          * 1 = Display down-stream traffic if set
